@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap');
+
+
+
+/* grid layout + grundläggande divar */
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow-x: hidden; 
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr 1fr 50px;
+
+    gap: 10px;
+
+    background-image: url(rymden.webp);
+}
+
+
+
+.container1{
+    width: 100vw; 
+    height: 100vh;
+
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 100px 1fr 1fr 50px; 
+
+    background-image: url(mars_surface.jpg); 
+    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+}
+
+.zontainer1 {
+    background-image: url(mars_surface.jpg);  
+    
+}
+
+.navbar {
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    border: 0px solid #000;
+    display: flex;
+
+    align-self: center;
+
+    height: 100%;
+    height: 100px;
+
+    background-color: #212A3E;
+
+    z-index: 99999; 
+
+}
+
+.stor {
+    /* grid-row: 2; */
+    grid-row-end: span 2;
+    border: 0px solid #000;
+    padding: 8px;
+
+    overflow-y: auto; 
+
+
+}  
+
+.shuuf{
+    grid-column: 1 / 1; 
+} 
+
+.small>p{
+    color: #9BA4B5; 
+}
+
+
+.shuuf>p{ 
+    color: #9BA4B5; 
+    padding-top: 0px; 
+
+} 
+
+.fååf{
+    padding: 10px;
+    
+}
+
+.fååf img{
+    height: 90%;
+    width: 90%; 
+}
+
+.liten {
+    border: 0px solid #000; 
+
+}
+
+.small{ 
+    grid-column: 1 / 1;
+    grid-row: 3 / 4;  
+
+    padding:10px; 
+    padding-top: 50px;
+}
+
+
+.sill{
+    grid-column: 3 ;  
+    grid-row:2 / 4;
+}
+
+
+
+.small img{
+    height: 100%; 
+    width: 100%;
+}
+
+
+.footer {
+    grid-column: 1 / span 3;
+    border: 1px solid #000; 
+    /* background-color: #b0b; */
+}
+
+
+/* Finliret på navbaren */
+
+.navbar>a {
+    display: block;
+    padding: 15px 15px;
+
+    background-color: #212A3E;
+
+    float: left;
+    display: flex;
+
+    height: 100%;
+    transition: 0.3s ease-in-out;
+
+    font-family: 'Staatliches', cursive;
+    color: #9BA4B5; 
+    text-decoration: none;
+
+    font-size: 30px;
+}
+
+.navbar>a:hover {
+    color: #F45050;
+
+}
+
+
+.navbar span {
+    align-self: center;
+}
+
+
+/* små boxarna */
+
+.liten a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+
+.liten a:hover {
+    color: #FF8400;
+}
+
+.liten {
+    text-align: center;
+
+}
+
+
+/* bilder */
+
+.bild {
+    display: flex;
+    overflow: hidden;
+
+}
+
+.bild img {
+    margin: auto;
+    max-width: 30vh;
+    max-height: 30vh;
+
+
+
+
+}
+
+.bild2 img {
+    margin: auto;
+
+    max-width: 100%;
+    max-height: 100%;
+
+
+}
+
+.bild a {
+
+    margin: auto;
+    transition: 0.5s ease-in-out;
+
+}
+
+
+
+
+/* bild effekter*/
+
+.bild a:hover {
+    transform: rotate(120deg) scale(1.02);
+
+}
+
+
+
+
+/*text*/
+
+p span {
+    color: #F45050;
+}
+
+p {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bolder;
+
+    color: white;
+}
+
+
+/* video */
+
+
+.stor2 {
+    align-self: center;
+} 
+
+.stor iframe {
+    width: 100%;
+    aspect-ratio: 4/3; 
+    
+}
+
+
+
+
+
+/* Dropdown button */
+.dropbtn {
+    background-color: #212A3E;
+    color: #9BA4B5;
+    padding: 16px;
+    border: none;
+    cursor: pointer; 
+
+    font-size: 30px;
+    font-family: 'Staatliches', cursive; 
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:focus {
+    background-color: #212A3E; 
+
+    font-family: 'Staatliches', cursive; 
+    font-size: 30px; 
+}
+
+.dropbtn:hover{
+    color: #F45050; 
+    transition: 0.2s ease-in-out;
+
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block; 
+
+    align-self: center; 
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #212A3E;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;  
+
+    min-width: 85px;
+
+
+}    
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #9BA4B5;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+
+    font-family: 'Staatliches', cursive;  
+    text-align: center;
+
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #F45050;
+
+    transition: 0.3s ease-in-out;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display: block;
+}
+
+
+/* 69 kommenterat bort */
+.kaka {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;    
+
+    min-height: calc(100vh - 100px);
+}
+
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        justify-content: space-evenly;
+        grid-column: 1 / -1;
+    }
+
+    .kaka {
+        grid-template-columns: 1fr; 
+
+        gap: 10px;  
+    }
+
+    .zontainer1{
+        display: grid;
+        grid-template-columns: 1fr;
+    } 
+
+    .zontainer2 img{
+        min-width: 100vw;
+    } 
+
+    .fååf img{ 
+        
+        min-width: 100vw
+    }  
+
+    .container{
+        display: grid;
+        grid-template-columns: 1fr; 
+    }
+
+} 
+
+.zontainer{
+    background-image: url(rymden.webp);
+    
+    min-height: 100vh;
+} 
+
+.zontainer1{
+    background-image: url(mars_surface.jpg); 
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    min-height: 100vh;
+}
+
+.zontainer2{
+    background-image: url(jupiter.jpg); 
+    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    min-height: 100vh;
+}
+
